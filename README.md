@@ -19,6 +19,7 @@ Initial container includes:
 * installing globally during initializaiton container these libraries:
   * cds
   * hana-cli
+  * cf8-cli
 
 You should clone this by command to provide your own name of docker container project:
 
@@ -27,14 +28,37 @@ You should clone this by command to provide your own name of docker container pr
 
 You should open it by `VS code` as `contianer` and add into it as many as you wish CDS projects.
 
-Use this command to add new project in container:
+Using container:
 
-    cds init <your_name_project>
+* create CAP project
 
-Use this command to add mock data into your new created project:
+  Use this command to add new project in container:
 
-    cds add tiny-sample
+      cds init <your_name_project>
 
-or
+  Use this command to add mock data into your new created project:
 
-    cds add data
+      cds add tiny-sample
+
+  or
+
+      cds add data
+
+* create connectivity to SAP HANA cloud:
+
+  * activate access to your Cloud Foundry in SAP BTP by preinstalled in container cf-cli using command:
+
+        cf login
+
+  * find name of your hana cloud from list of CF services:
+
+        cf services
+
+  * use preinstalled in container hana-client to accesss to your database:
+
+        hana-cli hc
+
+Enjoy, you have container which you can use for development your Full-Stack CAP applicaitons with access to SAP Hana Cloud based on SAP BTP CF.
+
+Thank you,
+LUKCAD.
