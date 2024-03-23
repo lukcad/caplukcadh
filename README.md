@@ -25,6 +25,7 @@ You should clone this by command to provide your own name of docker container pr
 
     git clone https://github.com/lukcad/caplukcadh.git <your_name_container_project>
 
+after clonning, you should change name of your container by opening file devcontainer.json and changing parameter "name" there.
 
 You should open it by `VS code` as `contianer` and add into it as many as you wish CDS projects.
 
